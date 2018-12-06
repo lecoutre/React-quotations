@@ -12,15 +12,15 @@ class Root extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            quotations: quotations,
+            quotes: quotations,
             currIndex: 0
         };
     }
 
     handleIndex(n) {
         const x = this.state.currIndex + n;
-        if (x >= this.state.quotations.length) this.setState({currIndex: 0});
-        else if (x <= 0) this.setState({currIndex: this.state.quotations.length - 1});
+        if (x >= this.state.quotes.length) this.setState({currIndex: 0});
+        else if (x <= 0) this.setState({currIndex: this.state.quotes.length - 1});
         else this.setState({currIndex: x});
     }
 
@@ -28,7 +28,7 @@ class Root extends React.Component {
         e.preventDefault();
         if (!e.target.newMessage.value) return;
         this.setState({
-            quotations: this.state.quotations.concat({
+            quotes: this.state.quotes.concat({
                 message: e.target.newMessage.value,
                 author: !e.target.newAuthor.value ? "anonymous" : e.target.newAuthor.value
             })
@@ -39,7 +39,7 @@ class Root extends React.Component {
     render() {
         return (
             <div>
-                <Quotation {...this.state.quotations[this.state.currIndex]}/>
+                <Quotation {...this.state.quotes[this.state.currIndex]}/>
                 <hr/>
                 <button onClick={() => this.handleIndex(-1)}>previous</button>
                 <button onClick={() => this.handleIndex(1)}>next</button>

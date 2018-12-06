@@ -1,6 +1,6 @@
 import React from 'react';
 
-// ---  exo6 : render a list of quotes ---
+// ---  Render a list of quotes ---
 let quotations = [
     {message: "Elementary, my dear Watson", author: "Sherlock Holmes"},
     {message: 'I think therefore I am', author: "Rene Descartes"},
@@ -12,7 +12,7 @@ class Root extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            quotations: quotations,
+            quotes: quotations,
             newMessage: "",
             newAuthor: "",
         };
@@ -22,7 +22,7 @@ class Root extends React.Component {
         e.preventDefault();
         if (!this.state.newMessage) return;
         this.setState({
-            quotations: this.state.quotations.concat({
+            quotes: this.state.quotes.concat({
                 message: this.state.newMessage,
                 author: this.state.newAuthor === "" ? "anonymous" : this.state.newAuthor
             })
@@ -34,14 +34,14 @@ class Root extends React.Component {
     }
 
     removeQuote(index) {
-        this.setState({quotations: this.state.quotations.filter((q, i) => i !== index)})
+        this.setState({quotes: this.state.quotes.filter((q, i) => i !== index)})
     }
 
     render() {
         return (
             <div>
                 <ul>
-                    {this.state.quotations.map(
+                    {this.state.quotes.map(
                         (q, i) => <Quotation key={i}
                                              {...q}
                                              removeQuote={() => this.removeQuote(i)}/>)

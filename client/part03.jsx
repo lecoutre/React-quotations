@@ -1,7 +1,7 @@
 import React from 'react';
 
 // ---  exo4 array of messages ---
-let quotations = [
+let quotes = [
     {message: "Elementary, my dear Watson", author: "Sherlock Holmes"},
     {message: 'I think therefore I am', author: "Rene Descartes"},
     {message: 'Life is like riding a bicycle. To keep your balance, you must keep moving', author: "Albert Einstein"},
@@ -12,13 +12,13 @@ class Root extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            quotations: quotations,
+            quotes: quotes,
             currIndex: 0
         };
     }
 
     handleNext() {
-        if (this.state.currIndex === this.state.quotations.length - 1) {
+        if (this.state.currIndex === this.state.quotes.length - 1) {
             this.setState({currIndex: 0})
         } else {
             this.setState({currIndex: this.state.currIndex + 1})
@@ -27,7 +27,7 @@ class Root extends React.Component {
 
     handlePrevious() {
         if (this.state.currIndex === 0) {
-            this.setState({currIndex: this.state.quotations.length - 1})
+            this.setState({currIndex: this.state.quotes.length - 1})
         } else {
             this.setState({currIndex: this.state.currIndex - 1})
         }
@@ -37,7 +37,7 @@ class Root extends React.Component {
         const buttonStyle = {marginLeft: "40px"};
         return (
             <div>
-                <Quotation {...this.state.quotations[this.state.currIndex]}/>
+                <Quotation {...this.state.quotes[this.state.currIndex]}/>
                 <hr/>
                 <button style={buttonStyle} onClick={() => this.handlePrevious()}>previous</button>
                 <button style={buttonStyle} onClick={() => this.handleNext()}>next</button>
@@ -55,8 +55,8 @@ class Quotation extends React.Component {
         const styleMessage = {color: 'red'}, styleAuthor = {color: 'green'};
         return (
             <div>
-                <h3 style={styleMessage}>What I have to say: {this.props.message} </h3>
-                <h4 style={styleAuthor}>{this.props.author}</h4>
+                <p>My quotations:</p>
+                <p style={styleMessage}>{this.props.message} <span style={styleAuthor}>({this.props.author})</span></p>
             </div>
         );
     }
