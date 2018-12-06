@@ -15,6 +15,6 @@ Each `client/partXX.jsx` file proposes a solution of some exercises proposed in 
 - **part04.jsx**:*Additionnal Functionalities*. Solutions for exercises 1 & 2 are proposed in this part: 
   - Add a form for inserting a new quote to the array.
   - Replace the methods incrementIndex and decrementIndex by a unique method.
-- **part05.jsx**: Here are solutions for exercises 1 and 3. Note that exercise 3 is a refinement of exercise 2.
+- **part05.jsx**: Here are solutions for exercises 3 and 5. Note that exercise 5 is a refinement of exercise 4.
 - **part06.jsx**: *??????*. Render all the quotes in a *HTML* list. A click event on a quote triggers removing it from the list.
 - **part07.jsx**: *??????*. Create a new class *Form* to manage the form and use it in the *Root* class. 
