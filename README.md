@@ -12,9 +12,9 @@ Each `client/partXX.jsx` file proposes a solution of some exercises proposed in 
 - **part01.jsx**: *managing a component state with React*. Exercises 1 to 3.
 - **part02.jsx**: *Composition of React components*. In *Root* class, two versions of the `render()` method are presented. The first one in the classical way, whereas the second one is using the [JavaScript spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - **part03.jsx**:*Managing Several Quotes*
-- **part04.jsx**:*Additionnal Functionalities*. The two first exercises are solved in this part : 
+- **part04.jsx**:*Additionnal Functionalities*. Solutions for exercises 1 & 2 are proposed in this part: 
   - Add a form for inserting a new quote to the array.
   - Replace the methods incrementIndex and decrementIndex by a unique method.
-- **part05.jsx**: the three next exercises. Note that the solution of the second exercise does not appear because the third exercise is a refinement of the second one.
+- **part05.jsx**: Here are solutions for exercises 1 and 3. Note that exercise 3 is a refinement of exercise 2.
 - **part06.jsx**: *??????*. Render all the quotes in a *HTML* list. A click event on a quote triggers removing it from the list.
 - **part07.jsx**: *??????*. Create a new class *Form* to manage the form and use it in the *Root* class. 
