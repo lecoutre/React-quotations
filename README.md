@@ -7,12 +7,12 @@ In the current directory of the projet, type the following commands:
 1. In a new tab, `npm run client`. This command is a shortcut to launch *Webpack* in development mode. It creates the 2 bundles you need to start the app (have a look at *index.html*)
 1. In a web browser type `http://localhost:3000`
 ## Access the exercises solutions
-In `client/main.jsx` file, you see a list of lines beginning with `import Root`. Uncomment only the line you want to execute.
-Each `client/partXX.jsx` file proposes a solution of some exercises proposed in [Lecoutre's pages](http://www.cril.univ-artois.fr/~lecoutre/#/courses)
-- **part01.jsx**: *managing a component state with React*. Exercises 1 to 3.
-- **part02.jsx**: *Composition of React components*. In *Root* class, two versions of the `render()` method are presented. The first one in the classical way, whereas the second one is using the [JavaScript spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-- **part03.jsx**:*Managing Several Quotes*
-- **part04.jsx**:*Additionnal Functionalities*. Solutions for exercises 1 & 2 are proposed in this part: 
+In `client/main.jsx` file, you see a list of lines beginning with `import Root`. Only one line can be (and must be) uncommented.
+In each `client/partXX.jsx` file, a solution is proposed for exercises proposed in [Lecoutre's pages](http://www.cril.univ-artois.fr/~lecoutre/#/courses)
+- **part01.jsx**: *Managing a component state with React*. Exercises 1, 2 & 3.
+- **part02.jsx**: *Composition of React components*. In *Root* class, two versions of the `render()` method are presented. The first one in the classical way, the second one by using the [JavaScript spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- **part03.jsx**: *Managing Several Quotes*
+- **part04.jsx**: *Additionnal Functionalities*. Solutions for exercises 1 & 2 are proposed in this part: 
   - Add a form for inserting a new quote to the array.
   - Replace the methods incrementIndex and decrementIndex by a unique method.
 - **part05.jsx**: Here are solutions for exercises 3 and 5. Note that exercise 5 is a refinement of exercise 4.
